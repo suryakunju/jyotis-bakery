@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order | Jyoti's Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="20" cy="24" rx="17" ry="11" fill="#d8893b"/><ellipse cx="20" cy="21" rx="17" ry="11" fill="#e9a557"/><path d="M10 18 q3 -4 6 0 M17 16 q3 -4 6 0 M24 18 q3 -4 6 0" stroke="#b5651d" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <span><span class="brand-name">Jyoti's Bakery</span><br><span class="brand-tag">Baked fresh every morning</span></span>
+    </a>
+    <button class="menu-button" aria-expanded="false" aria-controls="site-nav">&#9776; Menu</button>
+    <nav id="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="order.html" class="active">Order</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+<h1 class="page-title">Order for pickup</h1>
+<p class="page-sub">Tell us what you'd like and when you'll pick it up. We'll have it ready.</p>
+<form class="order" onsubmit="event.preventDefault(); document.getElementById('thanks').hidden = false;">
+  <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Your full name" required></div>
+  <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
+  <div class="field"><label for="item">What would you like?</label>
+    <select id="item" name="item">
+      <option>Sourdough Loaf</option><option>Seeded Rye</option><option>Butter Croissant (box of 6)</option>
+      <option>Almond Croissant (box of 6)</option><option>Lemon Tea Cake</option><option>Chocolate Cake</option>
+    </select></div>
+  <div class="field"><label for="pickup">Pickup date</label><input id="pickup" name="pickup" type="date" required></div>
+  <button type="submit">Place order</button>
+  <p id="thanks" hidden>Thanks! Your order is in. See you at pickup.</p>
+</form>
+</main>
+<footer>Jyoti's Bakery &middot; Open Tuesday to Sunday, 7am to 2pm</footer>
+<script src="menu.js"></script>
+</body>
+</html>
